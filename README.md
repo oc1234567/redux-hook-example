@@ -3,9 +3,10 @@
 
 ## 使用示例：
 
-//引入 Provider 文件 赋值 actions 与 initinalState
+###引入 Provider 文件 赋值 actions 与 initinalState
 示例：
-```
+```tsx
+import Provider from './initReactRedux/initProvider'
 import * as Actions from "./example-reducer";
 function App() {
     return (
@@ -20,8 +21,11 @@ function App() {
 }
 ```
 
-//在子组件内部使用 state 值与触发 dispatch
-```
+###在子组件内部使用 state 值与触发 dispatch
+```tsx
+import useState from './initReactRedux/useModal/useState'
+import useDispatch from './initReactRedux/useModal/useDispatch'
+
 function Content() {
     let { setTheme }  = useDispatch();
 
