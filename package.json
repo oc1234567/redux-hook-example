@@ -1,0 +1,44 @@
+{
+  "name": "redux-hook-example",
+  "version": "1.0.0",
+  "description": "a simple package to use redux with hook",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "dependencies": {
+    "emotion": "10.0.27",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-scripts": "3.3.0",
+    "redux": "4.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyj6607/redux-hook.git"
+  },
+  "keywords": [
+    "redux",
+    "hook"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zyj6607/redux-hook/issues"
+  },
+  "homepage": "https://github.com/zyj6607/redux-hook#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
