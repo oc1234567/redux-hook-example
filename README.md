@@ -28,7 +28,6 @@ import useDispatch from './initReactRedux/useModal/useDispatch'
 
 function Content() {
     let { setTheme }  = useDispatch();
-
     let state = useSubstate((state) => ({name: state.user.name, theme: state.theme}))
  
     return (
