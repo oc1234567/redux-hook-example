@@ -30,28 +30,29 @@ function Content() {
     let { setTheme }  = useDispatch();
 
     let state = useSubstate((state) => ({name: state.user.name, theme: state.theme}))
-  return (
-    <React.Fragment>
-      <ContentItem theme={state.theme} />
-      <button onClick={() => {
-        setTheme(state.theme==='dark' ? 'light' : 'dark');
-    }}> Change Name </button>
-  </React.Fragment>
-  );
+ 
+    return (
+      <React.Fragment>
+        <ContentItem theme={state.theme} />
+        <button onClick={() => {
+          setTheme(state.theme==='dark' ? 'light' : 'dark');
+        }}> Change Name </button>
+     </React.Fragment>
+   );
 }
 
 function Sidebar() {
     let { setName }  = useDispatch();
     let state = useSubstate((state) => ({name: state.user.name, theme: state.theme}))
-  return (
-    <React.Fragment>
-      <SidebarItem name={state.name} theme={state.theme} />
-      <button onClick={() => {
-        setName(state.name==='Bob' ? 'Alice' : 'Bob');
-    }}> Change Theme </button>
-    </React.Fragment>
-    
-  );
+  
+    return (
+      <React.Fragment>
+        <SidebarItem name={state.name} theme={state.theme} />
+        <button onClick={() => {
+          setName(state.name==='Bob' ? 'Alice' : 'Bob');
+      }}> Change Theme </button>
+      </React.Fragment>  
+    );
 }
 ```
 
