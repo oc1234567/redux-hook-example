@@ -29,13 +29,12 @@ import useDispatch from './initReactRedux/useModal/useDispatch'
 function Content() {
     let { setTheme }  = useDispatch();
 
-    let state = useState();
-  
-    return (
+    let state = useSubstate((state) => ({name: state.user.name, theme: state.theme}))
+  return (
     <React.Fragment>
-      <ContentSub theme={state.theme} />
+      <ContentItem theme={state.theme} />
       <button onClick={() => {
-        setTheme('dark');
+        setTheme(state.theme==='dark' ? 'light' : 'dark');
     }}> Change Name </button>
   </React.Fragment>
   );
@@ -43,14 +42,12 @@ function Content() {
 
 function Sidebar() {
     let { setName }  = useDispatch();
-
-    let state = useState();
-    
-    return (
+    let state = useSubstate((state) => ({name: state.user.name, theme: state.theme}))
+  return (
     <React.Fragment>
-      <SidebarSub user={state.user} theme={state.theme} />
+      <SidebarItem name={state.name} theme={state.theme} />
       <button onClick={() => {
-        setName('Bob');
+        setName(state.name==='Bob' ? 'Alice' : 'Bob');
     }}> Change Theme </button>
     </React.Fragment>
     
